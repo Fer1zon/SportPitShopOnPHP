@@ -50,6 +50,8 @@ header .logo {
 
 
 
+
+
 header nav {
     
     float: right;
@@ -73,49 +75,34 @@ header nav ul li {
 
 }
 
+
+
+
+
 header nav ul li a {
     color: white;
 }
 
-.slogan {
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 38px;
-    font-weight: 500;
-}
-
-.right-place{
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
-    border-top-left-radius:15px;
-    border-bottom-left-radius:15px;
-    margin-top: 40px;
-    height: 280px;
-    background-color: rgba(73, 184, 237, 1);
-    width: 98%;
-    margin-left: auto;            
-}
-
-.right-place img {
+.openModal {
+    background-color:transparent;
+    border: none;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
     
-    max-width: 100%;
-    max-height: 100%;
-
-    scale: 1.2;
-    margin-right: 100px;
-    float: right;
 }
 
 
 
-.population-products {
+/*Каталог*/
+.catalog-items {
     width: 100%;
-    height: 550px;
+    height: 1000px;
     margin-top: 80px;
 }
 
-.population-products-block-title {
+.products-block-title {
     text-align: center;
     font-size: 54px;
     font-weight: 700;
@@ -123,14 +110,16 @@ header nav ul li a {
 }
 
 
-.population-product-items{
+.product-items{
+    
     flex-wrap: wrap;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-.population-product-item {
+.product-item {
+    margin-top: 40px;
     
     padding-top: 20px;
     padding-left: 20px;
@@ -138,12 +127,12 @@ header nav ul li a {
     padding-bottom: 16px;
 
     border-radius: 50px;
-    width: 25%;
+    width: 20%;
     height: 400px;
     background: linear-gradient(180deg, rgba(8,111,161,1) 0%, rgba(81,158,195,1) 100%);
 }
 
-.interior-population-product {
+.interior-product {
     
     
     text-align: center;
@@ -153,14 +142,14 @@ header nav ul li a {
     border-radius: 24px;
 }
 
-.interior-population-product .population-product-img {
+.interior-product .product-img {
     min-height: 70%;
     max-width: 70%;
     max-height: 70%;
     padding-top: 10px;
 }
 
-.population-product-item-button {
+.product-item-button {
     width: 100%;
     height: 105px;
     background-color: rgba(33, 102, 137, 1);
@@ -168,13 +157,13 @@ header nav ul li a {
     border-bottom-left-radius: 24px;
 }
 
-.population-product-title {
+.product-title {
     
     font-size: 35px;
     font-weight: 500;
 }
 
-.population-product-stars-box {
+.product-stars-box {
     display: flex;
     justify-content: center;
 }
@@ -183,6 +172,9 @@ header nav ul li a {
     width: 15px;
     height: 15px;
 }
+
+
+
 
 
 footer {
@@ -277,14 +269,4 @@ footer {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
-}
-
-.openModal {
-    background-color:transparent;
-    border: none;
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    color: #fff;
-    
 }

@@ -4,22 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/index.css">
-    <title>Document</title>
+    <title>PROFIT</title>
 </head>
 <body>
-    <div class = "wrapper">
-        <header>
-            <a href = "#"><span class="logo">PROFIT</span></a>
-            <nav>
-                <ul>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Корзина</a></li>
-                </ul>
-            </nav>
+    
+    <header>
+        <a href = "./index.html" class = "logo">PROFIT</a>
+        <nav>
+            <ul>
+                <li><a href="./catalog.html">Каталог</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li class = "basket"><a href="#">Корзина</a></li>
+                <li><button class = "openModal" id="openModal">Регистрация</button></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    
+        <div class = "right-place">
+            <div class = "slogan">
+                <p>
+                Достижения начинаются<br>
+                здесь!<br>
+                Вдохновляйся спортом,<br>
+                достигай цели<br>
+                Подготовься к победе с нами!<br>
+                </p>
+            </div>
+
             
-        </header>
+            <img src = "../static/img/sportPit.png"/>
+        </div>
+
+        <div class = "population-products">
+            <p class = "population-products-block-title">Популярные товары</p>
+
+            <div class = "population-product-items">
+                <div class = "population-product-item">
+                    <div class = "interior-population-product">
+                        <img class = "population-product-img" src = "../static/img/Протеин.png">
+                        <div class = "population-product-item-button">
+                            <p class = "population-product-title">Протеин</p>
+                            <div class = "population-product-stars-box">
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "population-product-item">
+                    <div class = "interior-population-product">
+                        <img class = "population-product-img" src = "../static/img/Креатин.png">
+                        <div class = "population-product-item-button">
+                            <p class = "population-product-title">Креатин</p>
+                            <div class = "population-product-stars-box">
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "population-product-item">
+                    <div class = "interior-population-product">
+                        <img class = "population-product-img" src = "../static/img/ЛКарнитин.png">
+                        <div class = "population-product-item-button">
+                            <p class = "population-product-title">L-Карнитин</p>
+                            <div class = "population-product-stars-box">
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                                <img class = "star" src = "../static/img/icons/star.svg" alt = "star"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+                
+
+                
+                
+
+                
+
+
+                
+            </div>
+
+        </div>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
     </div>
     
+    
+
+    <footer>
+        <div class = "fast-links">
+            <a href = "#"><p>FAQ</p></a>
+            <a href = "./catalog.html"><p>Каталог</p></a>
+            <a href = "./index.html"><p>Главная</p></a>
+            <a href = "#"><p>Личный кабинет</p></a>
+            <a href = "#"><p>Контакты</p></a>
+            <a href = "#"><p>О компании</p></a>
+        </div>
+
+        <div class = "footer-logo">
+            <p>PROFIT</p>
+        </div>
+        
+    </footer>
+
+
+    <script src="../static/js/index.js"></script>
 </body>
 </html>
