@@ -4,7 +4,7 @@ from fastapi import UploadFile, Depends
 from pathlib import Path
 from app.database.working_with_db import Products
 
-router = APIRouter(prefix="/products", tags = ["Товары 📦"])
+router = APIRouter(prefix="/api/products", tags = ["Товары 📦"])
 
 
 @router.post("/new_product")
