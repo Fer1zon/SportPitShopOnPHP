@@ -3,12 +3,14 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 
-from database.models import createTables
+from app.database.database import createTables
 
-from scheduler.main import scheduler
+from app.scheduler.main import scheduler
 
 from fastapi.staticfiles import StaticFiles
 
+from app.routers.main_sheet import router as main_sheet_router
+from app.routers.products import router as products_router
 
 
 
@@ -17,11 +19,14 @@ from fastapi.staticfiles import StaticFiles
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    scheduler.start()
+    
     await createTables()
+    scheduler.start()
     yield
 
 
 
 app = FastAPI(lifespan=lifespan)
-app.mount('/static', app=StaticFiles(directory='static'), name="static")
+app.mount('/static', app=StaticFiles(directory='static', html=True), name="static")
+app.include_router(main_sheet_router)
+app.include_router(products_router)
