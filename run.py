@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from app.database.database import createTables
 
 from app.scheduler.main import scheduler
+import uvicorn
 
 from fastapi.staticfiles import StaticFiles
 
@@ -30,3 +31,7 @@ app = FastAPI(lifespan=lifespan)
 app.mount('/static', app=StaticFiles(directory='static', html=True), name="static")
 app.include_router(main_sheet_router)
 app.include_router(products_router)
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="localhost",port=8000)
