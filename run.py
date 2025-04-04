@@ -12,6 +12,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.routers.main_sheet import router as main_sheet_router
 from app.routers.products import router as products_router
+from app.routers.catalog import router as catalog_router
 
 
 
@@ -31,6 +32,7 @@ app = FastAPI(lifespan=lifespan)
 app.mount('/static', app=StaticFiles(directory='static', html=True), name="static")
 app.include_router(main_sheet_router)
 app.include_router(products_router)
+app.include_router(catalog_router)
 
 
 if __name__ == '__main__':
